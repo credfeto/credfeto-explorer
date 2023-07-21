@@ -1,0 +1,103 @@
+--- # Build and deploy packages
+name: 'Install dotnet and build tools'
+description: 'Install dotnet and build tools'
+inputs:
+  # GENERAL
+  GITHUB_TOKEN:
+    description: 'Github Token'
+    required: true
+
+  # NUGET
+  NUGET_ADDITIONAL_RESTORE_FEED:
+    description: 'Any additional nuget feed to download packages from'
+    required: false
+
+runs:
+  using: "composite"
+  steps:
+
+  - name: Determine .net core version
+    uses: credfeto/action-dotnet-version-detect@v1.3.0
+    with:
+      file: src/global.json
+      fallback: 7.0.*
+
+  - name: "Explicitly kill any existing dotnet"
+    run: rm -fr "${{github.workspace}}/.dotnet"
+    shell: bash
+
+  - name: Setup .NET Core
+    uses: actions/setup-dotnet@v3
+    env:
+      GITHUB_TOKEN: ${{inputs.GITHUB_TOKEN}}
+      DOTNET_ROOT: "${{github.workspace}}/.dotnet/${{github.sha}}-${{github.run_id}}-${{github.run_number}}-${{github.run_attempt}}"
+      DOTNET_INSTALL_DIR: "${{github.workspace}}/.dotnet/${{github.sha}}-${{github.run_id}}-${{github.run_number}}-${{github.run_attempt}}"
+      DOTNET_MULTILEVEL_LOOKUP: "false"
+      DOTNET_NOLOGO: "true"
+      DOTNET_PRINT_TELEMETRY_MESSAGE: "false"
+      DOTNET_ReadyToRun: "0"
+      DOTNET_TC_QuickJitForLoops: "1"
+      DOTNET_TieredPGO: "1"
+    with:
+      dotnet-version: |
+          6.0.*
+          7.0.*
+          ${{env.DOTNET_VERSION}}
+
+  - name: "Dotnet: Remove optional nuget feed if it exists"
+    shell: bash
+    run: |
+      echo "Removing Additional1 NuGet Feed"
+      [ "$(dotnet nuget list source | grep Additional1 | tr -s ' ' | cut -d ' ' -f 3)" == "Additional1" ] && dotnet nuget remove source Additional1 || echo "Additional1 NuGet Feed is Not Registered"
+
+  - if: ${{inputs.NUGET_ADDITIONAL_RESTORE_FEED != ''}}
+    name: "Dotnet: Add optional nuget feed"
+    shell: bash
+    run: |
+      echo "Adding Additional1 NuGet feed..."
+      dotnet nuget add source --name Additional1 "${{inputs.NUGET_ADDITIONAL_RESTORE_FEED}}"
+
+  - name: "Dotnet: Show sources"
+    shell: bash
+    run: dotnet nuget list source
+
+  - name: Enable dotnet tools
+    shell: bash
+    run: |
+      [ ! -f .config/dotnet-tools.json ] && dotnet new tool-manifest
+      dotnet tool restore || true
+    env:
+      DOTNET_ROOT: "${{github.workspace}}/.dotnet/${{github.sha}}-${{github.run_id}}-${{github.run_number}}-${{github.run_attempt}}"
+      DOTNET_INSTALL_DIR: "${{github.workspace}}/.dotnet/${{github.sha}}-${{github.run_id}}-${{github.run_number}}-${{github.run_attempt}}"
+      DOTNET_MULTILEVEL_LOOKUP: "false"
+      DOTNET_NOLOGO: "true"
+      DOTNET_PRINT_TELEMETRY_MESSAGE: "false"
+      DOTNET_ReadyToRun: "0"
+      DOTNET_TC_QuickJitForLoops: "1"
+      DOTNET_TieredPGO: "1"
+
+  - name: Install Build Version Tool
+    shell: bash
+    run: dotnet tool install --local FunFair.BuildVersion
+    env:
+      DOTNET_ROOT: "${{github.workspace}}/.dotnet/${{github.sha}}-${{github.run_id}}-${{github.run_number}}-${{github.run_attempt}}"
+      DOTNET_INSTALL_DIR: "${{github.workspace}}/.dotnet/${{github.sha}}-${{github.run_id}}-${{github.run_number}}-${{github.run_attempt}}"
+      DOTNET_MULTILEVEL_LOOKUP: "false"
+      DOTNET_NOLOGO: "true"
+      DOTNET_PRINT_TELEMETRY_MESSAGE: "false"
+      DOTNET_ReadyToRun: "0"
+      DOTNET_TC_QuickJitForLoops: "1"
+      DOTNET_TieredPGO: "1"
+
+  - name: Install Changelog Tool
+    shell: bash
+    run: dotnet tool install --local Credfeto.Changelog.Cmd
+    env:
+      DOTNET_ROOT: "${{github.workspace}}/.dotnet/${{github.sha}}-${{github.run_id}}-${{github.run_number}}-${{github.run_attempt}}"
+      DOTNET_INSTALL_DIR: "${{github.workspace}}/.dotnet/${{github.sha}}-${{github.run_id}}-${{github.run_number}}-${{github.run_attempt}}"
+      DOTNET_MULTILEVEL_LOOKUP: "false"
+      DOTNET_NOLOGO: "true"
+      DOTNET_PRINT_TELEMETRY_MESSAGE: "false"
+      DOTNET_ReadyToRun: "0"
+      DOTNET_TC_QuickJitForLoops: "1"
+      DOTNET_TieredPGO: "1"

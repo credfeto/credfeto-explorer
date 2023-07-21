@@ -1,0 +1,60 @@
+name: "Build: Release"
+
+on:
+  push:
+    branches:
+      - 'release/*'
+      - 'hotfix/*'
+
+concurrency:
+  group: ${{github.workflow}}-${{github.ref}}-release
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+  security-events: write
+
+jobs:
+  build-release:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Initialise Workspace
+        run: sudo chown -R "$USER:$USER" "$GITHUB_WORKSPACE"
+
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: "Check Repo Visibility"
+        uses: credfeto/action-repo-visibility@v1.2.0
+        id: visibility
+        with:
+          repository: ${{github.repository}}
+          token: ${{secrets.GITHUB_TOKEN}}
+
+      - name: Build and deploy
+        uses: ./.github/actions/build
+        with:
+          NPM_PRODUCTION_PACKAGER_VERSION: ${{vars.PRODUCTION_PACKAGER_VERSION}}
+          NPM_CONTENT_PACKAGE_WALLET_PASSWORD: ${{secrets.CONTENT_PACKAGE_WALLET_PASSWORD}}
+          NPM_PACKAGE_STORE_SIGNING_WALLET: ${{secrets.PACKAGE_STORE_SIGNING_WALLET}}
+          NPM_PACKAGE_STORE_SIGNING_WALLET_PASSWORD: ${{secrets.PACKAGE_STORE_SIGNING_WALLET_PASSWORD}}
+          NUGET_ADDITIONAL_RESTORE_FEED: ${{secrets.NUGET_ADDITIONAL_RESTORE_FEED}}
+          NUGET_PACK: ${{vars.NUGET_PACK}}
+          NUGET_FEED: ${{secrets.NUGET_FEED}}
+          NUGET_SYMBOL_FEED: ${{secrets.NUGET_SYMBOL_FEED}}
+          NUGET_API_KEY: ${{secrets.NUGET_API_KEY}}
+          OCTOPUS_SERVER: ${{vars.OCTOPUS_SERVER}}
+          OCTOPUS_SPACE_NAME: ${{vars.OCTOPUS_SPACE}}
+          OCTOPUS_PROJECT: ${{vars.OCTOPUS_PROJECT}}
+          OCTOPUS_CHANNEL: ${{vars.OCTOPUS_RELEASE_CHANNEL}}
+          OCTOPUS_DEPLOY_TO: ${{vars.OCTOPUS_DEPLOYTO_RELEASE}}
+          OCTOPUS_API_KEY: ${{secrets.OCTOPUS_API_KEY}}
+          OCTOPUS_DEPLOY_PACKAGE: ${{vars.OCTOPUS_DEPLOY_PACKAGE}}
+          OCTOPUS_DEPLOY_PACKAGE_ZIP: ${{vars.OCTOPUS_DEPLOY_PACKAGE_ZIP}}
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          REPO_VISIBILITY: ${{env.REPO_STATUS}}
+          CREATE_RELEASE: true
+
