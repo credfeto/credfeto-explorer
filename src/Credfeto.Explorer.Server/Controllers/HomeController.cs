@@ -1,7 +1,5 @@
-using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
 using Credfeto.Explorer.Server.Models;
 using FunFair.Ethereum.DataTypes;
 using FunFair.Ethereum.DataTypes.Primitives;
@@ -29,82 +27,64 @@ public sealed class HomeController : Controller
         return this.View(model);
     }
 
-    [Route(template: "{networkName}")]
-    public IActionResult Network(string networkName)
+    [Route(template: "{network}")]
+    public IActionResult Network(EthereumNetwork network)
     {
         IReadOnlyList<EthereumNetwork> networks = this._ethereumNetworkConfigurationManager.EnabledNetworks;
-        EthereumNetwork? match = networks.FirstOrDefault(predicate: n => StringComparer.InvariantCultureIgnoreCase.Equals(x: n.Name, y: networkName));
 
-        if (match is null)
-        {
-            return this.NotFound();
-        }
+        // lookup network status (endpoints etc)
+        // lookup latest block
+        // subscribe? to block updates
 
-        BaseModel<EthereumNetwork> model = new(Networks: networks, Model: match);
+        BaseModel<EthereumNetwork> model = new(Networks: networks, Model: network);
 
         return this.View(model);
     }
 
-    [Route(template: "{networkName}/block/{blockNumber}")]
-    public IActionResult Block(string networkName, BlockNumber blockNumber)
+    [Route(template: "{network}/block/{blockNumber}")]
+    public IActionResult Block(EthereumNetwork network, long blockNumber)
     {
         IReadOnlyList<EthereumNetwork> networks = this._ethereumNetworkConfigurationManager.EnabledNetworks;
-        EthereumNetwork? match = networks.FirstOrDefault(predicate: n => StringComparer.InvariantCultureIgnoreCase.Equals(x: n.Name, y: networkName));
 
-        if (match is null)
-        {
-            return this.NotFound();
-        }
+        // todo: lookup block by number return block with tx
 
-        BaseModel<EthereumNetwork> model = new(Networks: networks, Model: match);
+        BaseModel<EthereumNetwork> model = new(Networks: networks, Model: network);
 
         return this.View(model);
     }
 
-    [Route(template: "{networkName}/tx/{transactionHash}")]
-    public IActionResult Transaction(string networkName, TransactionHash transactionHash)
+    [Route(template: "{network}/tx/{transactionHash}")]
+    public IActionResult Transaction(EthereumNetwork network, TransactionHash transactionHash)
     {
         IReadOnlyList<EthereumNetwork> networks = this._ethereumNetworkConfigurationManager.EnabledNetworks;
-        EthereumNetwork? match = networks.FirstOrDefault(predicate: n => StringComparer.InvariantCultureIgnoreCase.Equals(x: n.Name, y: networkName));
 
-        if (match is null)
-        {
-            return this.NotFound();
-        }
+        // todo: lookup transaction, get receipt, if mined
 
-        BaseModel<EthereumNetwork> model = new(Networks: networks, Model: match);
+        BaseModel<EthereumNetwork> model = new(Networks: networks, Model: network);
 
         return this.View(model);
     }
 
-    [Route(template: "{networkName}/account/{accountAddress}")]
-    public IActionResult Account(string networkName, AccountAddress accountAddress)
+    [Route(template: "{network}/account/{accountAddress}")]
+    public IActionResult Account(EthereumNetwork network, AccountAddress accountAddress)
     {
         IReadOnlyList<EthereumNetwork> networks = this._ethereumNetworkConfigurationManager.EnabledNetworks;
-        EthereumNetwork? match = networks.FirstOrDefault(predicate: n => StringComparer.InvariantCultureIgnoreCase.Equals(x: n.Name, y: networkName));
 
-        if (match is null)
-        {
-            return this.NotFound();
-        }
+        // todo: lookup account, get balance, get tokens?
 
-        BaseModel<EthereumNetwork> model = new(Networks: networks, Model: match);
+        BaseModel<EthereumNetwork> model = new(Networks: networks, Model: network);
 
         return this.View(model);
     }
 
-    [Route(template: "{networkName}/token/{contractAddress}")]
-    public IActionResult Token(string networkName, ContractAddress contractAddress)
+    [Route(template: "{network}/token/{contractAddress}")]
+    public IActionResult Token(EthereumNetwork network, ContractAddress contractAddress)
     {
         IReadOnlyList<EthereumNetwork> networks = this._ethereumNetworkConfigurationManager.EnabledNetworks;
-        EthereumNetwork? match = networks.FirstOrDefault(predicate: n => StringComparer.InvariantCultureIgnoreCase.Equals(x: n.Name, y: networkName));
 
-        if (match is null)
-        {
-            return this.NotFound();
-        }
+        // todo: lookup contract, get info
 
-        BaseModel<EthereumNetwork> model = new(Networks: networks, Model: match);
+        BaseModel<EthereumNetwork> model = new(Networks: networks, Model: network);
 
         return this.View(model);
     }

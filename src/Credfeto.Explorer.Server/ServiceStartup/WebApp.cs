@@ -1,15 +1,23 @@
+using System;
 using System.IO.Compression;
 using System.Linq;
+using System.Text.Json.Serialization.Metadata;
 using Credfeto.Explorer.Server.Controllers;
 using FunFair.Common.Environment;
 using FunFair.Common.Middleware;
 using FunFair.Common.Middleware.Validation;
 using FunFair.Common.Server.ServiceStartup;
+using FunFair.Common.TypeConverters.Binders;
+using FunFair.Ethereum.Networks.Interfaces;
 using FunFair.Ethereum.Proxy.Shared;
+using FunFair.Ethereum.TypeConverters.Json;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.HttpOverrides;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.ResponseCompression;
+using Microsoft.AspNetCore.SignalR;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Options;
 
 namespace Credfeto.Explorer.Server.ServiceStartup;
 
@@ -59,6 +67,9 @@ internal static class WebApp
 
     public static void Configure(IApplicationBuilder app)
     {
+        RegisterEthereumNetworkConverter(app.ApplicationServices);
+        RegisterAdditionalMvcOptions(app.ApplicationServices);
+
         app = app.UseDefaultToNoResponseCachingMiddleware()
                  .UseResponseCompression()
                  .UseErrorHandling()
@@ -70,5 +81,36 @@ internal static class WebApp
                  .UseEndpoints(configure: endpoints => { endpoints.MapControllerRoute(name: "default", pattern: "{controller=Home}/{action=Index}/{id?}"); });
 
         ApplicationInsights.DisableTelemetry(app);
+    }
+
+    private static void RegisterEthereumNetworkConverter(IServiceProvider serviceProvider)
+    {
+        IEthereumNetworkRegistry networkRegistry = serviceProvider.GetRequiredService<IEthereumNetworkRegistry>();
+
+        IOptions<JsonOptions> mvcJsonOptions = serviceProvider.GetRequiredService<IOptions<JsonOptions>>();
+        IOptions<JsonHubProtocolOptions> signalrJsonOptions = serviceProvider.GetRequiredService<IOptions<JsonHubProtocolOptions>>();
+
+        EthereumNetworkConverter ethereumNetworkConverter = new(networkRegistry);
+
+        mvcJsonOptions.Value.JsonSerializerOptions.Converters.Add(ethereumNetworkConverter);
+        signalrJsonOptions.Value.PayloadSerializerOptions.Converters.Add(ethereumNetworkConverter);
+
+        // // this is a bit of an abomination!
+        mvcJsonOptions.Value.JsonSerializerOptions.TypeInfoResolver = JsonTypeInfoResolver.Combine(JsonSerialiser.ConfigureContext(new())
+                                                                                                                 .TypeInfoResolver!,
+                                                                                                   new DefaultJsonTypeInfoResolver());
+
+        JsonSerialiser.ConfigureContext(signalrJsonOptions.Value.PayloadSerializerOptions);
+    }
+
+    private static void RegisterAdditionalMvcOptions(IServiceProvider serviceProvider)
+    {
+        IOptions<MvcOptions> mvcOptions = serviceProvider.GetRequiredService<IOptions<MvcOptions>>();
+
+        IModelMetadataDetailsProvider modelMetadataDetailsProvider = serviceProvider.GetRequiredService<IModelMetadataDetailsProvider>();
+
+        MvcOptions options = mvcOptions.Value;
+        options.ModelBinderProviders.Insert(index: 0, item: modelMetadataDetailsProvider);
+        options.ModelMetadataDetailsProviders.Insert(index: 0, item: modelMetadataDetailsProvider);
     }
 }
