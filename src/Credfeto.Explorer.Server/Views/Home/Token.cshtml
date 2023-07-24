@@ -1,0 +1,12 @@
+@model BaseModel<EthereumNetwork>
+
+@{
+    ViewData["Title"] = Model.Model;
+}
+
+<div class="text-center">
+    <h1 class="display-4">@Model.Model.Name</h1>
+    <h2>Network Id: @Model.Model.NetworkId</h2>
+    <h2>Chain Id: @Model.Model.ChainId</h2>
+    <h2>Native Currency: @Model.Model.NativeCurrency</h2>
+</div>
