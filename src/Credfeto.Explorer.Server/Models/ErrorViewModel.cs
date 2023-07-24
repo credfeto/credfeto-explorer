@@ -1,8 +1,9 @@
+using System.Diagnostics;
+
 namespace Credfeto.Explorer.Server.Models;
 
-public sealed class ErrorViewModel
+[DebuggerDisplay("RequestId: {RequestId}")]
+public readonly record struct ErrorViewModel(string? RequestId)
 {
-    public string? RequestId { get; set; }
-
-    public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
+    public bool ShowRequestId => !string.IsNullOrEmpty(this.RequestId);
 }

@@ -1,5 +1,6 @@
 using System.Diagnostics;
 using Credfeto.Explorer.Server.Models;
+using FunFair.Ethereum.Networks.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
@@ -7,21 +8,20 @@ namespace Credfeto.Explorer.Server.Controllers;
 
 public sealed class HomeController : Controller
 {
+    private readonly IEthereumNetworkConfigurationManager _ethereumNetworkConfigurationManager;
     private readonly ILogger<HomeController> _logger;
 
-    public HomeController(ILogger<HomeController> logger)
+    public HomeController(IEthereumNetworkConfigurationManager ethereumNetworkConfigurationManager, ILogger<HomeController> logger)
     {
+        this._ethereumNetworkConfigurationManager = ethereumNetworkConfigurationManager;
         this._logger = logger;
     }
 
     public IActionResult Index()
     {
-        return this.View();
-    }
+        BaseModel<int> model = new(Networks: this._ethereumNetworkConfigurationManager.EnabledNetworks, Model: 42);
 
-    public IActionResult Privacy()
-    {
-        return this.View();
+        return this.View(model);
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
