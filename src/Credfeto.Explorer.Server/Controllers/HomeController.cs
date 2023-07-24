@@ -1,5 +1,9 @@
+using System;
+using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 using Credfeto.Explorer.Server.Models;
+using FunFair.Ethereum.DataTypes;
 using FunFair.Ethereum.Networks.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -20,6 +24,22 @@ public sealed class HomeController : Controller
     public IActionResult Index()
     {
         BaseModel<int> model = new(Networks: this._ethereumNetworkConfigurationManager.EnabledNetworks, Model: 42);
+
+        return this.View(model);
+    }
+
+    [Route(template: "{networkName}")]
+    public IActionResult Network(string networkName)
+    {
+        IReadOnlyList<EthereumNetwork> networks = this._ethereumNetworkConfigurationManager.EnabledNetworks;
+        EthereumNetwork? match = networks.FirstOrDefault(predicate: n => StringComparer.InvariantCultureIgnoreCase.Equals(x: n.Name, y: networkName));
+
+        if (match is null)
+        {
+            return this.NotFound();
+        }
+
+        BaseModel<EthereumNetwork> model = new(Networks: networks, Model: match);
 
         return this.View(model);
     }
