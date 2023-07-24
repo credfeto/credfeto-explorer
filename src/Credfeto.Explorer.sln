@@ -9,8 +9,24 @@ ProjectSection(SolutionItems) = preProject
 	global.json = global.json
 	..\CHANGELOG.md = ..\CHANGELOG.md
 	..\README.md = ..\README.md
-	FunFair.props = FunFair.props
 EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Server", "Server", "{5965A7CA-7F8C-4482-8929-4D5EE48CEDBD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Credfeto.Explorer.Server", "Credfeto.Explorer.Server\Credfeto.Explorer.Server.csproj", "{FF57E11D-642F-451D-B00D-4288A89F7349}"
+EndProject
 Global
+	GlobalSection(NestedProjects) = preSolution
+		{FF57E11D-642F-451D-B00D-4288A89F7349} = {5965A7CA-7F8C-4482-8929-4D5EE48CEDBD}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FF57E11D-642F-451D-B00D-4288A89F7349}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF57E11D-642F-451D-B00D-4288A89F7349}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF57E11D-642F-451D-B00D-4288A89F7349}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF57E11D-642F-451D-B00D-4288A89F7349}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
 EndGlobal
