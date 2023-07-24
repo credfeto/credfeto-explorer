@@ -68,7 +68,8 @@ internal static class Program
 
         Logging.ConfigureLogging(services: services, environment: executionEnvironment);
 
-        services.AddDotNetMemoryCaching()
+        services.AddSingleton(typeof(ExecutionEnvironment), implementationInstance: executionEnvironment)
+                .AddDotNetMemoryCaching()
                 .AddCors()
                 .AddControllersWithViews()
                 .AddApplicationPart(typeof(HomeController).Assembly)
@@ -85,6 +86,7 @@ internal static class Program
                 .AddDataAnnotationsLocalization()
                 .AddJsonOptions(configure: options => JsonSerialiser.Configure(options.JsonSerializerOptions))
                 .Services.AddHttpContextAccessor()
+
                 // .AddFluentValidationAutoValidation()
                 //.AddValidatorsFromAssemblyContaining<EthereumAddressBulkDtoValidator>(ServiceLifetime.Singleton)
                 // .ConfigureSwaggerServices(version: this._configuration.Version)
