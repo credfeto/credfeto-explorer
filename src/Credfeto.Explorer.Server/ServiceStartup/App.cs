@@ -1,3 +1,6 @@
+using Credfeto.Date;
+using Credfeto.Explorer.Ethereum;
+using Credfeto.Services.Startup;
 using FunFair.Common.Environment;
 using FunFair.Common.Server.ServiceStartup;
 using Microsoft.Extensions.DependencyInjection;
@@ -14,6 +17,12 @@ internal static class App
 
         services.AddSingleton(typeof(ExecutionEnvironment), implementationInstance: executionEnvironment)
                 .AddDotNetMemoryCaching()
+                .AddDate()
+                .AddRunOnStartupServices()
+                .AddOptions()
+                .AddOptions<LoggingConfiguration>("Logging:Loggly")
+                .Services.AddEthereumServices()
+                .AddEthereumLookupServices()
                 .AddWebApp(executionEnvironment);
     }
 }
