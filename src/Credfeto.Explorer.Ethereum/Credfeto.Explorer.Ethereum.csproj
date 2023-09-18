@@ -46,7 +46,7 @@
     <PackageReference Include="Credfeto.Date.Interfaces" Version="1.1.4.51" />
     <PackageReference Include="Credfeto.Services.Startup.Interfaces" Version="1.1.11.121" />
     <PackageReference Include="FunFair.Ethereum.All" Version="6.10.3.229" />
-    <PackageReference Include="FunFair.Random" Version="6.2.0.55" />
+    <PackageReference Include="FunFair.Random" Version="6.2.5.133" />
     <PackageReference Include="System.Interactive.Async" Version="6.0.1" />
     <PackageReference Include="System.Reactive" Version="6.0.0" />
   </ItemGroup>
