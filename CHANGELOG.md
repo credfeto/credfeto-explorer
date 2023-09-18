@@ -18,6 +18,7 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 - Dependencies - Updated Roslynator.Analyzers to 4.5.0
 - Dependencies - Updated SonarAnalyzer.CSharp to 9.10.0.77988
 - Dependencies - Updated Credfeto.Services.Startup to 1.1.11.121
+- Dependencies - Updated FunFair.Ethereum.Proxy.Client to 1.25.1.350
 ### Removed
 ### Deployment Changes
 
