@@ -17,6 +17,7 @@
     <JsonSerializerIsReflectionEnabledByDefault>false</JsonSerializerIsReflectionEnabledByDefault>
     <LangVersion>latest</LangVersion>
     <NoWarn />
+    <NuGetAudit>true</NuGetAudit>
     <Nullable>enable</Nullable>
     <OptimizationPreference>speed</OptimizationPreference>
     <OutputType>Library</OutputType>
@@ -27,7 +28,6 @@
     <TreatSpecificWarningsAsErrors />
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <UseSystemResourceKeys>true</UseSystemResourceKeys>
-    <NuGetAudit>true</NuGetAudit>
     <WarningsAsErrors />
   </PropertyGroup>
   <PropertyGroup>
@@ -39,9 +39,6 @@
     <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
     <EnforceExtendedAnalyzerRules>false</EnforceExtendedAnalyzerRules>
   </PropertyGroup>
-  <ItemGroup>
-    <Folder Include="BackgroundServices\" />
-  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Credfeto.Date.Interfaces" Version="1.1.4.51" />
     <PackageReference Include="Credfeto.Services.Startup.Interfaces" Version="1.1.11.121" />
