@@ -20,8 +20,8 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 - Dependencies - Updated Credfeto.Date to 1.1.5.91
 - Dependencies - Updated FunFair.Ethereum.Proxy.Client to 1.25.3.437
 - Dependencies - Updated SonarAnalyzer.CSharp to 9.11.0.78383
-- Dependencies - Updated FunFair.Ethereum to 6.10.16.406
 - Dependencies - Updated Meziantou.Analyzer to 2.0.92
+- Dependencies - Updated FunFair.Ethereum to 6.10.17.428
 ### Removed
 ### Deployment Changes
 
