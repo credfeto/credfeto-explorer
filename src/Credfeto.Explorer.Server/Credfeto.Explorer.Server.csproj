@@ -139,8 +139,8 @@
     <PackageReference Include="Credfeto.Date" Version="1.1.6.108" />
     <PackageReference Include="Credfeto.Services.Startup" Version="1.1.11.121" />
     <PackageReference Include="FunFair.Common.All" Version="6.3.12.191" />
-    <PackageReference Include="FunFair.Ethereum.All" Version="6.10.18.435" />
-    <PackageReference Include="FunFair.Ethereum.Crypto.Managed" Version="6.10.18.435" />
+    <PackageReference Include="FunFair.Ethereum.All" Version="6.10.19.460" />
+    <PackageReference Include="FunFair.Ethereum.Crypto.Managed" Version="6.10.19.460" />
     <PackageReference Include="FunFair.Ethereum.Proxy.Client" Version="1.25.4.464" />
   </ItemGroup>
   <ItemGroup>
