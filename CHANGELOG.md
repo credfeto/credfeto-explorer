@@ -21,7 +21,7 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 - Dependencies - Updated SonarAnalyzer.CSharp to 9.12.0.78982
 - Dependencies - Updated Credfeto.Date to 1.1.6.108
 - Dependencies - Updated FunFair.Random to 6.2.6.158
-- Dependencies - Updated FunFair.Ethereum to 6.10.19.460
+- Dependencies - Updated FunFair.Ethereum to 6.10.20.462
 ### Removed
 ### Deployment Changes
 
