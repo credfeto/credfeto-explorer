@@ -13,7 +13,6 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 - Dependencies - Updated Credfeto.Enumeration.Source.Generation to 1.1.0.138
 - Dependencies - Updated FunFair.CodeAnalysis to 7.0.3.138
 - Dependencies - Updated Microsoft.VisualStudio.Threading.Analyzers to 17.7.30
-- Dependencies - Updated Roslynator.Analyzers to 4.5.0
 - Dependencies - Updated Credfeto.Services.Startup to 1.1.11.121
 - Dependencies - Updated FunFair.Ethereum.Proxy.Client to 1.25.4.464
 - SDK - Updated DotNet SDK to 8.0.100-rc.2.23502.2
@@ -22,6 +21,7 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 - Dependencies - Updated Credfeto.Date to 1.1.6.108
 - Dependencies - Updated FunFair.Random to 6.2.6.158
 - Dependencies - Updated FunFair.Ethereum to 6.10.20.462
+- Dependencies - Updated Roslynator.Analyzers to 4.6.0
 ### Removed
 ### Deployment Changes
 
