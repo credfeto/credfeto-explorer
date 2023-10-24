@@ -21,7 +21,7 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 - Dependencies - Updated FunFair.Random to 6.2.6.158
 - Dependencies - Updated FunFair.Ethereum to 6.10.20.462
 - Dependencies - Updated Roslynator.Analyzers to 4.6.0
-- Dependencies - Updated Meziantou.Analyzer to 2.0.94
+- Dependencies - Updated Meziantou.Analyzer to 2.0.96
 ### Removed
 ### Deployment Changes
 
