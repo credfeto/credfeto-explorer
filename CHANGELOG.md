@@ -20,9 +20,9 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 - Dependencies - Updated Credfeto.Date to 1.1.6.108
 - Dependencies - Updated FunFair.Random to 6.2.6.158
 - Dependencies - Updated FunFair.Ethereum to 6.10.20.462
-- Dependencies - Updated Roslynator.Analyzers to 4.6.0
 - Dependencies - Updated Meziantou.Analyzer to 2.0.96
 - Dependencies - Updated Philips.CodeAnalysis.MaintainabilityAnalyzers to 1.3.0
+- Dependencies - Updated Roslynator.Analyzers to 4.6.1
 ### Removed
 ### Deployment Changes
 
