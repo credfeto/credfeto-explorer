@@ -22,6 +22,7 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 - Dependencies - Updated FunFair.Ethereum to 6.10.20.462
 - Dependencies - Updated Roslynator.Analyzers to 4.6.0
 - Dependencies - Updated Meziantou.Analyzer to 2.0.96
+- Dependencies - Updated Philips.CodeAnalysis.MaintainabilityAnalyzers to 1.3.0
 ### Removed
 ### Deployment Changes
 
