@@ -18,11 +18,11 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 - Dependencies - Updated SonarAnalyzer.CSharp to 9.12.0.78982
 - Dependencies - Updated Credfeto.Date to 1.1.6.108
 - Dependencies - Updated FunFair.Random to 6.2.6.158
-- Dependencies - Updated Philips.CodeAnalysis.MaintainabilityAnalyzers to 1.3.0
 - Dependencies - Updated Roslynator.Analyzers to 4.6.1
 - Dependencies - Updated Meziantou.Analyzer to 2.0.98
 - Dependencies - Updated FunFair.Ethereum to 6.10.22.495
 - Dependencies - Updated FunFair.Ethereum.Proxy.Client to 1.25.5.526
+- Dependencies - Updated Philips.CodeAnalysis.MaintainabilityAnalyzers to 1.3.1
 ### Removed
 ### Deployment Changes
 
