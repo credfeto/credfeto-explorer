@@ -16,13 +16,13 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 - Dependencies - Updated Credfeto.Services.Startup to 1.1.11.121
 - SDK - Updated DotNet SDK to 8.0.100-rc.2.23502.2
 - Dependencies - Updated SonarAnalyzer.CSharp to 9.12.0.78982
-- Dependencies - Updated Philips.CodeAnalysis.MaintainabilityAnalyzers to 1.3.1
 - Dependencies - Updated FunFair.Ethereum.Proxy.Client to 1.25.6.582
 - Dependencies - Updated FunFair.Ethereum to 6.10.26.539
 - Dependencies - Updated Roslynator.Analyzers to 4.6.2
 - Dependencies - Updated Credfeto.Date to 1.1.7.133
 - Dependencies - Updated Meziantou.Analyzer to 2.0.109
 - Dependencies - Updated FunFair.Random to 6.2.7.188
+- Dependencies - Updated Philips.CodeAnalysis.MaintainabilityAnalyzers to 1.4.0
 ### Removed
 ### Deployment Changes
 
