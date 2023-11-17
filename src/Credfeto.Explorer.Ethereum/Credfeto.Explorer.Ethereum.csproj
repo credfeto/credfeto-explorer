@@ -40,7 +40,7 @@
     <EnforceExtendedAnalyzerRules>false</EnforceExtendedAnalyzerRules>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Credfeto.Date.Interfaces" Version="1.1.7.133" />
+    <PackageReference Include="Credfeto.Date.Interfaces" Version="1.1.8.149" />
     <PackageReference Include="Credfeto.Services.Startup.Interfaces" Version="1.1.11.121" />
     <PackageReference Include="FunFair.Ethereum.All" Version="6.10.27.578" />
     <PackageReference Include="FunFair.Random" Version="6.2.8.200" />
