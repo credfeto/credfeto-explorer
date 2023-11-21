@@ -141,7 +141,7 @@
     <PackageReference Include="FunFair.Common.All" Version="6.3.12.191" />
     <PackageReference Include="FunFair.Ethereum.All" Version="6.10.28.587" />
     <PackageReference Include="FunFair.Ethereum.Crypto.Managed" Version="6.10.28.587" />
-    <PackageReference Include="FunFair.Ethereum.Proxy.Client" Version="1.25.6.582" />
+    <PackageReference Include="FunFair.Ethereum.Proxy.Client" Version="1.25.7.646" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="AsyncFixer" Version="1.6.0" PrivateAssets="All" ExcludeAssets="runtime" />
