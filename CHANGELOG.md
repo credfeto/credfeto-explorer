@@ -12,7 +12,6 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 - FF-3881 - Updated DotNet SDK to 7.0.200
 - Dependencies - Updated Credfeto.Services.Startup to 1.1.11.121
 - Dependencies - Updated SonarAnalyzer.CSharp to 9.12.0.78982
-- Dependencies - Updated Roslynator.Analyzers to 4.6.2
 - Dependencies - Updated Philips.CodeAnalysis.MaintainabilityAnalyzers to 1.4.0
 - SDK - Updated DotNet SDK to 8.0.100
 - Dependencies - Updated FunFair.CodeAnalysis to 7.0.4.198
@@ -23,6 +22,7 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 - Dependencies - Updated FunFair.Random to 6.2.9.212
 - Dependencies - Updated FunFair.Ethereum.Proxy.Client to 1.25.7.646
 - Dependencies - Updated FunFair.Ethereum to 6.10.29.590
+- Dependencies - Updated Roslynator.Analyzers to 4.6.4
 ### Removed
 ### Deployment Changes
 
