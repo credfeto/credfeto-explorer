@@ -27,6 +27,7 @@ internal static class Program
                                                         httpPort: 7000,
                                                         httpsPort: 7001,
                                                         h2Port: 7002,
+                                                        executionEnvironment: ExecutionEnvironment.LOCAL,
                                                         configurationFilesPath: configurationFilesPath,
                                                         serviceBuilder: App.ConfigureServices,
                                                         appBuilder: WebApp.Configure))
@@ -41,12 +42,7 @@ internal static class Program
                 ExecutionEnvironment executionEnvironment = serviceProvider.GetRequiredService<ExecutionEnvironment>();
                 IOptions<LoggingConfiguration> logging = serviceProvider.GetRequiredService<IOptions<LoggingConfiguration>>();
 
-                Logging.InitializeLogging(environment: executionEnvironment,
-                                          loggerFactory: loggerFactory,
-                                          configuration: logging.Value,
-                                          typeof(Program).Namespace!,
-                                          version: "1.0",
-                                          tenant: "");
+                Logging.InitializeLogging(environment: executionEnvironment, loggerFactory: loggerFactory, configuration: logging.Value, typeof(Program).Namespace!, version: "1.0", tenant: "");
 
                 //await ApplicationSetup.StartupAsync(serviceProvider: host.Services, cancellationToken: CancellationToken.None);
                 logger = serviceProvider.GetRequiredService<ILogger<IHost>>();
