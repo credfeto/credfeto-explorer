@@ -15,7 +15,6 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 - Dependencies - Updated Philips.CodeAnalysis.MaintainabilityAnalyzers to 1.4.0
 - SDK - Updated DotNet SDK to 8.0.100
 - Dependencies - Updated FunFair.CodeAnalysis to 7.0.4.198
-- Dependencies - Updated Meziantou.Analyzer to 2.0.110
 - Dependencies - Updated Microsoft.VisualStudio.Threading.Analyzers to 17.8.14
 - Dependencies - Updated Credfeto.Enumeration.Source.Generation to 1.1.1.168
 - Dependencies - Updated Credfeto.Date to 1.1.8.149
@@ -24,6 +23,7 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 - Dependencies - Updated Roslynator.Analyzers to 4.6.4
 - Dependencies - Updated FunFair.Ethereum to 6.10.30.606
 - Dependencies - Updated FunFair.Common to 6.3.39.477
+- Dependencies - Updated Meziantou.Analyzer to 2.0.112
 ### Removed
 ### Deployment Changes
 
