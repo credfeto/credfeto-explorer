@@ -20,10 +20,10 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 - Dependencies - Updated FunFair.Random to 6.2.9.212
 - Dependencies - Updated FunFair.Ethereum.Proxy.Client to 1.25.7.646
 - Dependencies - Updated Roslynator.Analyzers to 4.6.4
-- Dependencies - Updated FunFair.Common to 6.3.40.485
 - Dependencies - Updated FunFair.Ethereum to 6.10.31.611
 - Dependencies - Updated SonarAnalyzer.CSharp to 9.14.0.81108
 - Dependencies - Updated Meziantou.Analyzer to 2.0.116
+- Dependencies - Updated FunFair.Common to 6.3.41.494
 ### Removed
 ### Deployment Changes
 
