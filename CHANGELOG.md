@@ -24,7 +24,7 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 - Dependencies - Updated FunFair.Common to 6.3.42.499
 - Dependencies - Updated SmartAnalyzers.CSharpExtensions.Annotations to 4.2.9
 - Dependencies - Updated Credfeto.Date to 1.1.9.181
-- Dependencies - Updated Meziantou.Analyzer to 2.0.123
+- Dependencies - Updated Meziantou.Analyzer to 2.0.127
 ### Removed
 ### Deployment Changes
 
