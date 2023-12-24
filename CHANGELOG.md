@@ -9,7 +9,6 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 ### Added
 ### Fixed
 ### Changed
-- FF-3881 - Updated DotNet SDK to 7.0.200
 - Dependencies - Updated Credfeto.Services.Startup to 1.1.11.121
 - Dependencies - Updated Philips.CodeAnalysis.MaintainabilityAnalyzers to 1.4.0
 - SDK - Updated DotNet SDK to 8.0.100
