@@ -76,9 +76,16 @@ internal static class WebApp
                                                 .UseHttpStrictTransportSecurity()
                                                 .UseServerNameHeader()
                                                 .UseRequestIpAddressMiddleware()
-                                                .UseForwardedHeaders(new() { ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto | ForwardedHeaders.XForwardedHost })
+                                                .UseForwardedHeaders(new()
+                                                                     {
+                                                                         ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto |
+                                                                                            ForwardedHeaders.XForwardedHost
+                                                                     })
                                                 .UseRouting()
-                                                .UseEndpoints(configure: endpoints => { endpoints.MapControllerRoute(name: "default", pattern: "{controller=Home}/{action=Index}/{id?}"); }));
+                                                .UseEndpoints(configure: endpoints =>
+                                                                         {
+                                                                             endpoints.MapControllerRoute(name: "default", pattern: "{controller=Home}/{action=Index}/{id?}");
+                                                                         }));
     }
 
     private static void RegisterEthereumNetworkConverter(IServiceProvider serviceProvider)
