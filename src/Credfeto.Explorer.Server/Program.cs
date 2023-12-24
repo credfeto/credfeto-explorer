@@ -45,7 +45,7 @@ internal static class Program
                 Logging.InitializeLogging(environment: executionEnvironment,
                                           loggerFactory: loggerFactory,
                                           configuration: logging.Value,
-                                          typeof(Program).Namespace!,
+                                          typeof(Program).Namespace ?? "Credfeto.Explorer.Server",
                                           version: "1.0",
                                           tenant: "");
 
