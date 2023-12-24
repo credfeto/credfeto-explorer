@@ -51,9 +51,9 @@ internal static class WebApp
     private static void InitialiseResponseCompression(ResponseCompressionOptions options)
     {
         string[] compressibleMimeTypes =
-        {
+        [
             "image/svg+xml"
-        };
+        ];
 
         options.EnableForHttps = true;
 
