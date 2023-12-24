@@ -70,17 +70,15 @@ internal static class WebApp
         RegisterEthereumNetworkConverter(app.ApplicationServices);
         RegisterAdditionalMvcOptions(app.ApplicationServices);
 
-        app = app.UseDefaultToNoResponseCachingMiddleware()
-                 .UseResponseCompression()
-                 .UseErrorHandling()
-                 .UseHttpStrictTransportSecurity()
-                 .UseServerNameHeader()
-                 .UseRequestIpAddressMiddleware()
-                 .UseForwardedHeaders(new() { ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto | ForwardedHeaders.XForwardedHost })
-                 .UseRouting()
-                 .UseEndpoints(configure: endpoints => { endpoints.MapControllerRoute(name: "default", pattern: "{controller=Home}/{action=Index}/{id?}"); });
-
-        ApplicationInsights.DisableTelemetry(app);
+        ApplicationInsights.DisableTelemetry(app.UseDefaultToNoResponseCachingMiddleware()
+                                                .UseResponseCompression()
+                                                .UseErrorHandling()
+                                                .UseHttpStrictTransportSecurity()
+                                                .UseServerNameHeader()
+                                                .UseRequestIpAddressMiddleware()
+                                                .UseForwardedHeaders(new() { ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto | ForwardedHeaders.XForwardedHost })
+                                                .UseRouting()
+                                                .UseEndpoints(configure: endpoints => { endpoints.MapControllerRoute(name: "default", pattern: "{controller=Home}/{action=Index}/{id?}"); }));
     }
 
     private static void RegisterEthereumNetworkConverter(IServiceProvider serviceProvider)
@@ -97,7 +95,7 @@ internal static class WebApp
 
         // // this is a bit of an abomination!
         mvcJsonOptions.Value.JsonSerializerOptions.TypeInfoResolver = JsonTypeInfoResolver.Combine(JsonSerialiser.ConfigureContext(new())
-                                                                                                                 .TypeInfoResolver!,
+                                                                                                                 .TypeInfoResolver,
                                                                                                    new DefaultJsonTypeInfoResolver());
 
         JsonSerialiser.ConfigureContext(signalrJsonOptions.Value.PayloadSerializerOptions);
