@@ -11,9 +11,9 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 ### Changed
 - Dependencies - Updated Nullable.Extended.Analyzer to 1.15.6169
 - Dependencies - Updated Roslynator.Analyzers to 4.8.0
-- Dependencies - Updated Meziantou.Analyzer to 2.0.134
 - Dependencies - Updated FunFair.CodeAnalysis to 7.0.6.239
 - Dependencies - Updated FunFair.Common to 6.3.45.563
+- Dependencies - Updated Meziantou.Analyzer to 2.0.135
 ### Removed
 ### Deployment Changes
 
