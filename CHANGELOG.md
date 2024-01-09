@@ -14,6 +14,7 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 - Dependencies - Updated FunFair.CodeAnalysis to 7.0.6.239
 - Dependencies - Updated FunFair.Common to 6.3.45.563
 - Dependencies - Updated Meziantou.Analyzer to 2.0.135
+- Dependencies - Updated FunFair.Ethereum to 6.10.38.717
 ### Removed
 ### Deployment Changes
 
