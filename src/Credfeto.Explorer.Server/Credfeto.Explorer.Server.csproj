@@ -136,7 +136,7 @@
     <ProjectReference Include="..\Credfeto.Explorer.Ethereum\Credfeto.Explorer.Ethereum.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Credfeto.Date" Version="1.1.9.181" />
+    <PackageReference Include="Credfeto.Date" Version="1.1.10.240" />
     <PackageReference Include="Credfeto.Services.Startup" Version="1.1.11.121" />
     <PackageReference Include="FunFair.Common.All" Version="6.3.47.570" />
     <PackageReference Include="FunFair.Ethereum.All" Version="6.10.40.721" />
