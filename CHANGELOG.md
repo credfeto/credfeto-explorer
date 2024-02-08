@@ -11,7 +11,6 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 ### Changed
 - Dependencies - Updated Nullable.Extended.Analyzer to 1.15.6169
 - Dependencies - Updated FunFair.Common to 6.3.47.570
-- Dependencies - Updated FunFair.Ethereum to 6.10.40.721
 - Dependencies - Updated Roslynator.Analyzers to 4.10.0
 - Dependencies - Updated SonarAnalyzer.CSharp to 9.19.0.84025
 - Dependencies - Updated Meziantou.Analyzer to 2.0.140
@@ -20,6 +19,7 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 - Dependencies - Updated Credfeto.Date to 1.1.10.240
 - Dependencies - Updated FunFair.Random to 6.2.10.303
 - Dependencies - Updated Credfeto.Enumeration.Source.Generation to 1.1.2.260
+- Dependencies - Updated FunFair.Ethereum to 6.10.41.753
 ### Removed
 ### Deployment Changes
 
