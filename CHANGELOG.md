@@ -15,11 +15,11 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 - Dependencies - Updated Meziantou.Analyzer to 2.0.140
 - Dependencies - Updated Microsoft.VisualStudio.Threading.Analyzers to 17.9.28
 - Dependencies - Updated FunFair.Random to 6.2.10.303
-- Dependencies - Updated FunFair.Ethereum to 6.10.41.753
 - Dependencies - Updated Credfeto.Date to 1.1.11.243
 - Dependencies - Updated Credfeto.Enumeration.Source.Generation to 1.1.2.267
 - Dependencies - Updated FunFair.CodeAnalysis to 7.0.8.274
 - Dependencies - Updated FunFair.Common to 6.3.48.610
+- Dependencies - Updated FunFair.Ethereum to 6.10.42.766
 ### Removed
 ### Deployment Changes
 
