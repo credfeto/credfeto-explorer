@@ -20,6 +20,7 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 - Dependencies - Updated FunFair.CodeAnalysis to 7.0.8.274
 - Dependencies - Updated FunFair.Common to 6.3.48.610
 - Dependencies - Updated FunFair.Ethereum to 6.10.42.766
+- Dependencies - Updated Credfeto.Services.Startup to 1.1.15.161
 ### Removed
 ### Deployment Changes
 

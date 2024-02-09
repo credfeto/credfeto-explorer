@@ -41,7 +41,7 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Credfeto.Date.Interfaces" Version="1.1.11.243" />
-    <PackageReference Include="Credfeto.Services.Startup.Interfaces" Version="1.1.11.121" />
+    <PackageReference Include="Credfeto.Services.Startup.Interfaces" Version="1.1.15.161" />
     <PackageReference Include="FunFair.Ethereum.All" Version="6.10.42.766" />
     <PackageReference Include="FunFair.Random" Version="6.2.10.303" />
     <PackageReference Include="System.Interactive.Async" Version="6.0.1" />
