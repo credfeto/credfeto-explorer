@@ -17,10 +17,10 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 - Dependencies - Updated Credfeto.Date to 1.1.11.243
 - Dependencies - Updated Credfeto.Enumeration.Source.Generation to 1.1.2.267
 - Dependencies - Updated FunFair.CodeAnalysis to 7.0.8.274
-- Dependencies - Updated FunFair.Common to 6.3.48.610
 - Dependencies - Updated FunFair.Ethereum to 6.10.42.766
 - Dependencies - Updated Credfeto.Services.Startup to 1.1.15.161
 - Dependencies - Updated Meziantou.Analyzer to 2.0.141
+- Dependencies - Updated FunFair.Common to 6.3.49.614
 ### Removed
 ### Deployment Changes
 
