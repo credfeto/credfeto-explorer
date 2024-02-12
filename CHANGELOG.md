@@ -20,8 +20,8 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 - Dependencies - Updated Meziantou.Analyzer to 2.0.141
 - Dependencies - Updated FunFair.Common to 6.3.49.614
 - Dependencies - Updated FunFair.Random to 6.2.11.311
-- Dependencies - Updated Credfeto.Date to 1.1.12.249
 - Dependencies - Updated NSubstitute.Analyzers.CSharp to 1.0.17
+- Dependencies - Updated Credfeto.Date to 1.1.13.250
 ### Removed
 ### Deployment Changes
 
