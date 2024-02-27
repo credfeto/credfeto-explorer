@@ -12,7 +12,6 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 - Dependencies - Updated Nullable.Extended.Analyzer to 1.15.6169
 - Dependencies - Updated Microsoft.VisualStudio.Threading.Analyzers to 17.9.28
 - Dependencies - Updated Credfeto.Enumeration.Source.Generation to 1.1.2.267
-- Dependencies - Updated FunFair.CodeAnalysis to 7.0.8.274
 - Dependencies - Updated FunFair.Ethereum to 6.10.42.766
 - Dependencies - Updated Credfeto.Services.Startup to 1.1.15.161
 - Dependencies - Updated FunFair.Common to 6.3.49.614
@@ -24,6 +23,7 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 - Dependencies - Updated Roslynator.Analyzers to 4.11.0
 - Dependencies - Updated SonarAnalyzer.CSharp to 9.20.0.85982
 - Dependencies - Updated coverlet to 6.0.1
+- Dependencies - Updated FunFair.CodeAnalysis to 7.0.9.296
 ### Removed
 ### Deployment Changes
 
