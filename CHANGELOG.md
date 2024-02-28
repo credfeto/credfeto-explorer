@@ -23,7 +23,7 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 - Dependencies - Updated SonarAnalyzer.CSharp to 9.20.0.85982
 - Dependencies - Updated coverlet to 6.0.1
 - Dependencies - Updated FunFair.CodeAnalysis to 7.0.9.296
-- Dependencies - Updated FunFair.Common to 6.3.50.645
+- Dependencies - Updated FunFair.Common to 6.3.51.649
 ### Removed
 ### Deployment Changes
 
