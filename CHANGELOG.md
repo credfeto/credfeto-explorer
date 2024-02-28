@@ -14,7 +14,6 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 - Dependencies - Updated Credfeto.Enumeration.Source.Generation to 1.1.2.267
 - Dependencies - Updated FunFair.Ethereum to 6.10.42.766
 - Dependencies - Updated Credfeto.Services.Startup to 1.1.15.161
-- Dependencies - Updated FunFair.Random to 6.2.11.311
 - Dependencies - Updated NSubstitute.Analyzers.CSharp to 1.0.17
 - Dependencies - Updated Credfeto.Date to 1.1.13.250
 - SDK - Updated DotNet SDK to 8.0.201
@@ -25,6 +24,7 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 - Dependencies - Updated FunFair.CodeAnalysis to 7.0.9.296
 - Dependencies - Updated FunFair.Common to 6.3.51.649
 - Dependencies - Updated FunFair.Ethereum.Proxy.Client to 1.25.8.858
+- Dependencies - Updated FunFair.Random to 6.2.12.333
 ### Removed
 ### Deployment Changes
 
