@@ -24,6 +24,7 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 - Dependencies - Updated coverlet to 6.0.1
 - Dependencies - Updated FunFair.CodeAnalysis to 7.0.9.296
 - Dependencies - Updated FunFair.Common to 6.3.51.649
+- Dependencies - Updated FunFair.Ethereum.Proxy.Client to 1.25.8.858
 ### Removed
 ### Deployment Changes
 
