@@ -11,7 +11,6 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 ### Changed
 - Dependencies - Updated Nullable.Extended.Analyzer to 1.15.6169
 - Dependencies - Updated Microsoft.VisualStudio.Threading.Analyzers to 17.9.28
-- Dependencies - Updated Credfeto.Enumeration.Source.Generation to 1.1.2.267
 - Dependencies - Updated FunFair.Ethereum to 6.10.42.766
 - Dependencies - Updated Credfeto.Services.Startup to 1.1.15.161
 - Dependencies - Updated NSubstitute.Analyzers.CSharp to 1.0.17
@@ -25,6 +24,7 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 - Dependencies - Updated FunFair.Common to 6.3.51.649
 - Dependencies - Updated FunFair.Ethereum.Proxy.Client to 1.25.8.858
 - Dependencies - Updated FunFair.Random to 6.2.12.333
+- Dependencies - Updated Credfeto.Enumeration.Source.Generation to 1.1.3.296
 ### Removed
 ### Deployment Changes
 
