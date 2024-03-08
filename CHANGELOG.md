@@ -23,8 +23,8 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 - Dependencies - Updated FunFair.Common to 6.3.51.649
 - Dependencies - Updated FunFair.Ethereum.Proxy.Client to 1.25.8.858
 - Dependencies - Updated FunFair.Random to 6.2.12.333
-- Dependencies - Updated Credfeto.Enumeration.Source.Generation to 1.1.3.296
 - Dependencies - Updated FunFair.CodeAnalysis to 7.0.10.303
+- Dependencies - Updated Credfeto.Enumeration.Source.Generation to 1.1.4.303
 ### Removed
 ### Deployment Changes
 
