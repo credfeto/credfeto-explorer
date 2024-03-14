@@ -18,13 +18,13 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 - Dependencies - Updated Meziantou.Analyzer to 2.0.145
 - Dependencies - Updated Roslynator.Analyzers to 4.11.0
 - Dependencies - Updated SonarAnalyzer.CSharp to 9.20.0.85982
-- Dependencies - Updated coverlet to 6.0.1
 - Dependencies - Updated FunFair.Common to 6.3.51.649
 - Dependencies - Updated FunFair.Ethereum.Proxy.Client to 1.25.8.858
 - Dependencies - Updated FunFair.Random to 6.2.12.333
 - Dependencies - Updated FunFair.CodeAnalysis to 7.0.10.303
 - Dependencies - Updated Credfeto.Enumeration.Source.Generation to 1.1.4.303
 - SDK - Updated DotNet SDK to 8.0.202
+- Dependencies - Updated coverlet to 6.0.2
 ### Removed
 ### Deployment Changes
 
