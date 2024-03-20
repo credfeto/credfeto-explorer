@@ -20,12 +20,12 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 - Dependencies - Updated FunFair.Common to 6.3.51.649
 - Dependencies - Updated FunFair.Ethereum.Proxy.Client to 1.25.8.858
 - Dependencies - Updated FunFair.Random to 6.2.12.333
-- Dependencies - Updated FunFair.CodeAnalysis to 7.0.10.303
 - Dependencies - Updated Credfeto.Enumeration.Source.Generation to 1.1.4.303
 - SDK - Updated DotNet SDK to 8.0.203
 - Dependencies - Updated Discord.Net.Analyzers to 3.14.1
 - Dependencies - Updated Meziantou.Analyzer to 2.0.146
 - Dependencies - Updated Roslynator.Analyzers to 4.12.0
+- Dependencies - Updated FunFair.CodeAnalysis to 7.0.11.311
 ### Removed
 ### Deployment Changes
 
